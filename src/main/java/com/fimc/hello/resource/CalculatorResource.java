@@ -11,11 +11,11 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 @Component
-@Path("/calc")
+@Path("/calculator")
 public class CalculatorResource {
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response calc(CalculatorRequest request) {
+	public Response calculator(CalculatorRequest request) {
 		CalculatorResponse calculatorResponse = new CalculatorResponse();
 		if((StringUtils.isEmpty(request.getOperator()) || 
 					StringUtils.isEmpty(request.getNumber1()) ||
